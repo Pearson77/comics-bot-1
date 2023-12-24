@@ -6,7 +6,7 @@ import config
 bot = TeleBot(token=config.TOKEN)
 
 
-@bot.message_handler(commands=['start'])
+@bot.message_handler(commands=['start', 'comics'])
 def send_comics_choice(message: types.Message):
     bot.send_message(
         chat_id=message.chat.id,

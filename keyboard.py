@@ -3,6 +3,9 @@ from comics import get_comics_list
 
 
 def create_choice_keyboard():
+    """
+    Создаём разметку клавиатуры для выбора комикса
+    """
     markup = InlineKeyboardMarkup(row_width=1)
     comics_lis: list[str] = get_comics_list()
 
@@ -13,6 +16,9 @@ def create_choice_keyboard():
 
 
 def create_pages_keyboard(current_page: int, pages_count: int, comics: str):
+    """
+    Создаём разметку клавиатуры для страницы комикса
+    """
     markup = InlineKeyboardMarkup()
     buttons = []
 
