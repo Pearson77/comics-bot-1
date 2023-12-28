@@ -30,6 +30,7 @@ def return_page_by_number(callback: types.CallbackQuery):
             comics=comics_name
         )
     )
+    bot.answer_callback_query(callback.id)
 
 
 @bot.callback_query_handler(lambda call: call.data.split(':')[0] == "to-comics")
@@ -54,6 +55,7 @@ def return_comics_choice_by_button(callback: types.CallbackQuery):
         chat_id=callback.message.chat.id,
     )
     send_comics_choice(message=callback.message)
+    bot.answer_callback_query(callback.id)
 
 
 if __name__ == "__main__":
