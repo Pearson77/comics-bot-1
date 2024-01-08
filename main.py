@@ -1,7 +1,8 @@
+import config
+
 from telebot import TeleBot, types
 from keyboard import create_choice_keyboard, create_pages_keyboard
 from comics import *
-import config
 
 bot = TeleBot(token=config.TOKEN)
 
